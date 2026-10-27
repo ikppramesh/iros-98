@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IROS 98</title>
+  <link rel="stylesheet" href="css/iros.css">
+</head>
+<body data-theme="classic">
+  <div id="desktop"><div id="icons"></div></div>
+  <div id="windows"></div>
+
+  <div id="dash" hidden>
+    <input id="dash-search" placeholder="Type to search apps, files or commands…" autocomplete="off" spellcheck="false">
+    <div id="dash-ws"></div>
+    <div id="dash-grid"></div>
+    <div id="dash-files"></div>
+  </div>
+
+  <div id="taskbar" class="raised">
+    <button id="start-btn" class="btn"><span class="logo-mark">IR</span>Start</button>
+    <div class="quick">
+      <button class="qbtn" data-act="dash" title="Activities (Ctrl+Space)"><span class="grid-ico"></span></button>
+      <button class="qbtn" data-app="files" title="File Manager">📁</button>
+      <button class="qbtn" data-app="terminal" title="Terminal (Ctrl+Alt+T)">💻</button>
+      <button class="qbtn" data-act="desktop" title="Show Desktop">🏞️</button>
+    </div>
+    <div id="task-buttons"></div>
+    <div id="tray">
+      <div class="ws-switch" title="Workspaces (Ctrl+Alt+←/→)">
+        <button>1</button><button>2</button><button>3</button><button>4</button>
+      </div>
+      <span id="net" title="Network">🌐</span>
+      <span id="vol" title="Sound">🔊</span>
+      <span id="clock"></span>
+    </div>
+  </div>
+
+  <div id="notifications"></div>
+
+  <div id="boot" hidden></div>
+  <div id="splash" hidden>
+    <div class="splash-inner">
+      <div class="splash-logo"><span class="logo-mark big">IR</span>IROS</div>
+      <div class="splash-sub">98.04 LTS &middot; Retro Raccoon</div>
+      <div class="splash-tag">Classic desktop. Linux heart.</div>
+      <div class="splash-bar sunken"><i></i></div>
+    </div>
+  </div>
+  <div id="login" hidden></div>
+  <div id="power" hidden></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/vfs.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/wm.js"></script>
+  <script src="js/apps.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
