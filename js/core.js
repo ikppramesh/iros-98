@@ -5,7 +5,7 @@
 const HOME = '/home/user';
 const TRASH = HOME + '/.local/share/Trash';
 const BOOT_TIME = Date.now();
-const VERSION = '98.04 LTS';
+const VERSION = '98.10 LTS';
 const CODENAME = 'Retro Raccoon';
 
 function el(tag, attrs = {}, ...kids) {

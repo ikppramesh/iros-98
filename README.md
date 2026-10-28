@@ -1,4 +1,4 @@
-# IROS 98.04 LTS — "Retro Raccoon"
+# IROS 98.10 LTS — "Retro Raccoon"
 
 A browser-based desktop operating system: the look and feel of a classic 90s desktop
 with a Linux / Ubuntu heart. No build step and no dependencies.

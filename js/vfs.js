@@ -63,6 +63,12 @@ Everything you create is saved in your browser.
 
   function load() {
     root = Store.get(KEY, null) || defaults();
+    // /etc belongs to the system: refresh its release files so upgrades show the current version.
+    const etc = root.children.etc;
+    if (etc?.type === 'dir') Object.assign(etc.children, {
+      'os-release': defaults().children.etc.children['os-release'],
+      motd: defaults().children.etc.children.motd,
+    });
   }
   function save() {
     if (!Store.set(KEY, root)) {

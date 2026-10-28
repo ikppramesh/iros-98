@@ -656,7 +656,7 @@ cmd('uname', 'print system information (-a)', function (args, io) {
   io.out(args.includes('-a') ? 'Linux iros 6.8.0-iros #98-IROS SMP PREEMPT_DYNAMIC x86_64 x86_64 x86_64 GNU/Linux\n' : 'Linux\n');
 });
 cmd('lsb_release', 'print distribution information', function (args, io) {
-  io.out(`Distributor ID:\tIROS\nDescription:\tIROS ${VERSION}\nRelease:\t98.04\nCodename:\traccoon\n`);
+  io.out(`Distributor ID:\tIROS\nDescription:\tIROS ${VERSION}\nRelease:\t98.10\nCodename:\traccoon\n`);
 });
 cmd('ver', 'show the IROS version', function (args, io) { io.out(`\nIROS [Version ${VERSION}]\n\n`); });
 cmd('date', 'print the date and time', function (args, io) { io.out(new Date().toString().replace(/ \(.*\)$/, '') + '\n'); });
@@ -953,7 +953,7 @@ cmd(['apt', 'apt-get'], 'package manager (install, remove, list, search, update,
 });
 cmd('dpkg', 'list installed packages (-l)', function (args, io) {
   io.out('Desired=Unknown/Install/Remove/Purge/Hold\n||/ Name            Version      Description\n+++-===============-============-====================================\n');
-  for (const a of Object.values(APPS).filter(a => a.builtin && !a.hidden)) io.out(`ii  ${('iros-' + a.id).padEnd(15)} ${'98.04'.padEnd(12)} ${a.name} (base system)\n`);
+  for (const a of Object.values(APPS).filter(a => a.builtin && !a.hidden)) io.out(`ii  ${('iros-' + a.id).padEnd(15)} ${'98.10'.padEnd(12)} ${a.name} (base system)\n`);
   for (const p of Packages.catalog.filter(p => Packages.isInstalled(p.id))) io.out(`ii  ${p.id.padEnd(15)} ${p.version.padEnd(12)} ${p.desc.slice(0, 40)}\n`);
 });
 
@@ -967,7 +967,7 @@ cmd('neofetch', 'show system information with a logo', function (args, io) {
     '   _| |_ | | \\ \\   ',
     '  |_____||_|  \\_\\  ',
     '                   ',
-    '   ~ IROS 98.04 ~  ',
+    '   ~ IROS 98.10 ~  ',
   ];
   const u = this.env.USER;
   const info = [
@@ -1034,7 +1034,7 @@ cmd('sl', 'steam locomotive', async function (args, io) {
   const train = [
     '      ____                         ',
     '   __|[]|__________  ___________   ',
-    '  |  IROS EXPRESS  ||  98.04    |  ',
+    '  |  IROS EXPRESS  ||  98.10    |  ',
     '  |________________||___________|  ',
     ' _/ (O)  (O)  (O)  \\/ (O)   (O) \\_ ',
   ];

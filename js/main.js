@@ -101,7 +101,7 @@ function openStartMenu() {
     { icon: '🔑', label: `Log Off ${Settings.get('username')}...`, action: () => System.shutdown('logoff') },
     { icon: '⏻', label: 'Shut Down...', action: shutdownDialog },
   ];
-  const m = UI.menu(0, 0, items, { cls: 'start-menu', banner: 'IROS 98.04' });
+  const m = UI.menu(0, 0, items, { cls: 'start-menu', banner: 'IROS 98.10' });
   const r = btn.getBoundingClientRect();
   m.style.left = '2px';
   m.style.top = (r.top - m.offsetHeight - 2) + 'px';
